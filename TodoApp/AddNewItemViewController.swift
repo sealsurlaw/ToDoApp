@@ -7,7 +7,7 @@ class AddNewItemViewController: UIViewController {
 
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         let newTask: [String:String] = ["title": taskName.text!, "description": taskDescription.text!]
-        TaskLists.incomplete.append(newTask)
+        ListHelper.addTask(newTask, to: .incomplete)
         navigationController?.popViewController(animated: true)
     }
     

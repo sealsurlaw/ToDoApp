@@ -12,9 +12,9 @@ class EditItemViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        TaskLists.incomplete.remove(at: rowNumber)
+        ListHelper.removeTask(task, from: .incomplete)
         let editTask: [String:String] = ["title": taskName.text!, "description": taskDescription.text!]
-        TaskLists.incomplete.append(editTask)
+        ListHelper.addTask(editTask, to: .incomplete)
         navigationController?.popViewController(animated: true)
     }
 }
