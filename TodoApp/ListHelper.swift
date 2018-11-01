@@ -32,7 +32,6 @@ class ListHelper {
             }
         }
         else {
-            print("in else")
             for item in TaskLists.incomplete {
                 if item == task {
                     TaskLists.incomplete.remove(at: i)
